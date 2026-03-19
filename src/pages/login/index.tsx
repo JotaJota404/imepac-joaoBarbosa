@@ -1,0 +1,38 @@
+import React from "react";
+import {
+    Text,
+    View,
+    Image,
+    TextInput,
+} from "react-native";
+import { style } from "./styles";
+import { MaterialIcons } from "@expo/vector-icons";
+import { themas } from "../../global/themes";
+import logo from "../../assets/login.png";
+
+
+export default function Login() {
+    return (
+        <View style={style.container}>
+            <View style={style.boxTop}>
+                <Image source={logo} />
+                <Text>Bem Vindo!!!</Text>
+            </View>
+            <View style={style.boxMid}>
+                    <Text style={style.title}>E-mail</Text>
+                <View style={style.boxInputEmail}>
+                    <TextInput style={style.input}/>
+                    <MaterialIcons name="email" size={20} color={themas.colors.gray}/>    
+                </View>
+                    <Text style={style.title}>Coloque sua Senha</Text>
+                <View style={style.boxInputSenha}>
+                    <TextInput style={style.input}/>
+                    <MaterialIcons name="password" size={20} color={themas.colors.gray}/>
+                </View>
+            </View>
+            <View style={style.boxBottom}>
+                <Text>Bottom</Text>
+            </View>
+        </View> 
+            )       
+}    
